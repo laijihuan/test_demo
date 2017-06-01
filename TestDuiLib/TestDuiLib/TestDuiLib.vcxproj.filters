@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Control">
+      <UniqueIdentifier>{618d564f-4694-4114-bdd2-adb86e6e90c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Core">
+      <UniqueIdentifier>{cf0e4b9b-e544-4fed-8aa7-4bb5e5e7e55f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Layout">
+      <UniqueIdentifier>{ac723e85-843c-4562-a56b-d08cb7f319d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Utils">
+      <UniqueIdentifier>{2c8cb183-035b-46f4-80f4-947d65ccfa50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Control">
+      <UniqueIdentifier>{b5e933c8-7356-4609-a0c1-87aa3eea67d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Core">
+      <UniqueIdentifier>{0048b262-aef0-4d37-8b76-81ea7184c28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Layout">
+      <UniqueIdentifier>{eb249ebe-cadf-484d-a048-b7afebbe48c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Utils">
+      <UniqueIdentifier>{a9cbdaf3-20f0-48cc-a153-9ea902119a18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UIlib.cpp">
@@ -21,6 +45,9 @@
     <ClCompile Include="StdAfx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>源文件\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UIlib.h">
@@ -28,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="StdAfx.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>头文件\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
