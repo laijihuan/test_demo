@@ -30,7 +30,28 @@ namespace DuiLib
 	////////////////////////////////////////////////////////////////////////
 	//
 
+	class UILIB_API CDuiSize : public tagSIZE
+	{
+	public:
+		CDuiSize();
+		CDuiSize(const SIZE& src);
+		CDuiSize(const RECT rc);
+		CDuiSize(int _cx, int _cy);
+	};
 
+
+	////////////////////////////////////////////////////////////////////////
+	//
+
+	class UILIB_API CDuiRect : public tagRECT
+	{
+	public:
+		CDuiRect();
+		CDuiRect(const RECT& src);
+		CDuiRect(int iLeft, int iTop, int iRight, int iBottom);
+
+
+	};
 
 
 }
