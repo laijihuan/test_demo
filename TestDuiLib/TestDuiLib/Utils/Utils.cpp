@@ -60,6 +60,89 @@ namespace DuiLib
 	////////////////////////////////////////////////////////////////////////
 	//
 
+	CDuiRect::CDuiRect()
+	{
+		left = top = right = right = 0;
+	}
+
+	CDuiRect::CDuiRect(const RECT& src)
+	{
+		left = src.left;
+		top = src.top;
+		right = src.right;
+		bottom = src.bottom;
+	}
+
+	CDuiRect::CDuiRect(int iLeft, int iTop, int iRight, int iBottom)
+	{
+		left = iLeft;
+		top = iTop;
+		right = iRight;
+		bottom = iBottom;
+	}
+
+	int CDuiRect::GetWidth() const
+	{
+		return right - left;
+	}
+
+	int CDuiRect::GetHeight() const
+	{
+		return bottom - top;
+	}
+
+	void CDuiRect::Empty()
+	{
+		left = top = right = bottom = 0;
+	}
+
+	bool CDuiRect::isNull() const
+	{
+		return (left == 0 && top == 0 && right == 0 && bottom == 0);
+	}
+
+	void CDuiRect::Join(const RECT& rc)
+	{
+		if (left > rc.left) left = rc.left;
+		if (top > rc.top) top = rc.top;
+		if (right < rc.right) right = rc.right;
+		if (bottom < rc.bottom) bottom = rc.bottom;		
+	}
+
+	void CDuiRect::ResetOffset()
+	{
+		::OffsetRect(this, -left, -top);
+	}
+
+	void CDuiRect::Normalize()
+	{
+		if (left > right) { int iTemp = left; left = right; right = iTemp; }
+		if (top > bottom) { int iTemp = top; top = bottom; bottom = iTemp; }
+	}
+
+	void CDuiRect::Offset(int _cx, int _cy)
+	{
+		::OffsetRect(this, _cx, _cy);
+	}
+
+	void CDuiRect::Inflate(int _cx, int _cy)
+	{
+		::InflateRect(this, _cx, _cy);
+	}
+
+	void CDuiRect::Deflate(int _cx, int _cy)
+	{
+		::InflateRect(this, -_cx, -_cy);
+	}
+
+	void CDuiRect::Union(CDuiRect& rc)
+	{
+		::UnionRect(this, this, &rc);
+	}
+
+	////////////////////////////////////////////////////////////////////////
+	//
+
 
 
 

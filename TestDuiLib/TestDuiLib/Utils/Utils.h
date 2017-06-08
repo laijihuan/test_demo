@@ -50,7 +50,17 @@ namespace DuiLib
 		CDuiRect(const RECT& src);
 		CDuiRect(int iLeft, int iTop, int iRight, int iBottom);
 
-
+		int GetWidth() const;
+		int GetHeight() const;
+		void Empty();
+		bool isNull() const;
+		void Join(const RECT& rc);
+		void ResetOffset();
+		void Normalize();
+		void Offset(int _cx, int _cy);
+		void Inflate(int _cx, int _cy);
+		void Deflate(int _cx, int _cy);
+		void Union(CDuiRect& rc);
 	};
 
 
